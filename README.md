@@ -15,8 +15,8 @@ Reference site: https://headstargroups.com/
 | Interactivity  | Vanilla JS + jQuery 3.7                       |
 | Scroll Animation | AOS (Animate On Scroll) library             |
 | Form Handling  | jQuery validation + Web3Forms API             |
-| Icons          | Google Material Icons (free, CDN)             |
-| Fonts          | Google Fonts — Montserrat & Poppins           |
+| Icons          | Google Material Icons + Font Awesome 6 (brand icons), free, CDN |
+| Fonts          | Google Fonts — Fraunces (display serif) & Inter (body) |
 | Images         | Unsplash / Pexels (free stock, hotlinked)     |
 
 No build tools, no bundlers, no frameworks (React/Vue/Bootstrap) — pure hand-written front-end code, exactly as requested.
@@ -79,6 +79,12 @@ python3 -m http.server 8080
 - [x] Favicons generated from the brand logo (16/32/48/180px + .ico)
 - [x] Separate CSS / JS / images files (no inline spaghetti); header/footer inlined per page
 - [x] FAQ accordion section (Home page) — click-to-expand, only one open at a time
+- [x] Unified 4-column responsive footer grid (Brand+Social | Quick Links | Our Trading | Registered Office), centered and stacked cleanly on mobile
+- [x] Real Facebook / LinkedIn / Instagram / WhatsApp brand icons (Font Awesome) in header bar and footer — no more generic Material Icon stand-ins
+- [x] Footer logo uses a transparent-background version of your logo at full original brightness/colour (no invert filter)
+- [x] Full visual redesign: editorial serif/sans type pairing (Fraunces + Inter), warm cream/ink colour system, dramatic bottom-aligned hero, refined pill buttons, top-accent hover cards, italic emphasis headings
+- [x] "Trust & Compliance" section rebuilt as a two-row, opposite-direction infinite auto-scroll marquee of certification badges (pauses on hover, fades at edges) instead of a static logo grid
+- [x] Content cross-checked against the live site again — added the missing "Expert Shipping Team" home section and corrected the Retail page title to "Retail Distribution & Franchising" to match real site naming
 
 ---
 

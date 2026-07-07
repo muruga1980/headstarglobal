@@ -27,11 +27,12 @@
 <!-- Fonts & Icons -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <!-- AOS Animation Library -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
 
 <!-- Site Styles -->
 <link rel="stylesheet" href="css/style.css">
@@ -78,9 +79,9 @@
       <li class="d-none-mobile"><i class="material-icons">location_on</i> Navi Mumbai, Maharashtra, India</li>
     </ul>
     <div class="social-links">
-      <a href="https://www.facebook.com/profile.php?id=61553343447345" target="_blank" rel="noopener" aria-label="Facebook"><i class="material-icons">public</i></a>
-      <a href="https://www.linkedin.com/in/anoop-thajudeen-a72394227/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="material-icons">business_center</i></a>
-      <a href="https://www.instagram.com/headstarglobal/" target="_blank" rel="noopener" aria-label="Instagram"><i class="material-icons">camera_alt</i></a>
+      <a href="https://www.facebook.com/profile.php?id=61553343447345" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="https://www.linkedin.com/in/anoop-thajudeen-a72394227/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://www.instagram.com/headstarglobal/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
     </div>
   </div>
 </div>
@@ -123,16 +124,16 @@
     </video>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1 data-aos="fade-up">Trusted Merchant Trading Partner for <em style="color:var(--primary); font-style:normal;">Agro Products</em></h1>
-      <p data-aos="fade-up" data-aos-delay="100">An ISO 9001:2015 certified leader in agro trading and export, connecting quality agricultural commodities from origin to destination across India and international markets.</p>
-      <div class="hero-buttons" data-aos="fade-up" data-aos-delay="200">
+      <span class="eyebrow" data-aos="fade-up">ISO 9001:2015 Certified &middot; Est. Agro Trading House</span>
+      <h1 data-aos="fade-up" data-aos-delay="80">Trusted Merchant Trading Partner for <em>Agro Products</em></h1>
+      <p data-aos="fade-up" data-aos-delay="160">An ISO 9001:2015 certified leader in agro trading and export, connecting quality agricultural commodities from origin to destination across India and international markets.</p>
+      <div class="hero-buttons" data-aos="fade-up" data-aos-delay="240">
         <a href="contact.html" class="btn-primary"><i class="material-icons">send</i> Get a Quote</a>
         <a href="agro-products.html" class="btn-outline"><i class="material-icons">inventory_2</i> Our Products</a>
       </div>
     </div>
     <div class="scroll-indicator">
       <span>Scroll</span>
-      <i class="material-icons">expand_more</i>
     </div>
   </section>
 
@@ -162,8 +163,33 @@
     </div>
   </section>
 
+  <!-- MERCHANT TRADING SNAPSHOT -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="content-block reverse">
+        <div class="image-wrap" data-aos="fade-left">
+          <img src="https://images.unsplash.com/photo-1759216373394-91146ca977c7?auto=format&fit=crop&w=900&q=80"
+               alt="Expert shipping team committed to flawless execution" loading="lazy" width="900" height="650" class="img-radius">
+        </div>
+        <div class="text-wrap" data-aos="fade-right">
+          <div class="section-heading mb-0">
+            <h6>Global Logistics</h6>
+            <h2>Expert Shipping Team Committed to <em>Flawless Execution</em></h2>
+          </div>
+          <p>We have built strong and enduring relationships with our suppliers, enabling us to source the best agro products from around the globe. Our extensive network of trusted partners ensures a consistent supply of high-quality goods, giving our customers peace of mind.</p>
+          <ul>
+            <li><i class="material-icons">check_circle</i> Well-established shipping & logistics partners</li>
+            <li><i class="material-icons">check_circle</i> Timely, efficient worldwide delivery</li>
+            <li><i class="material-icons">check_circle</i> Consistent supply of high-quality goods</li>
+          </ul>
+          <a href="merchant-trading.html" class="btn-primary" style="background:var(--secondary); border-color:var(--secondary);">Explore Merchant Trading <i class="material-icons">arrow_forward</i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- SERVICES / TRADING VERTICALS -->
-  <section class="section bg-light" id="services">
+  <section class="section" id="services">
     <div class="container">
       <div class="section-heading text-center" data-aos="fade-up">
         <h6>What We Do</h6>
@@ -279,22 +305,44 @@
   <section class="certi-section">
     <div class="container">
       <div class="section-heading text-center" data-aos="fade-up">
-        <h6>Trust & Compliance</h6>
+        <h6>Trust &amp; Compliance</h6>
         <h2>Committed to <em>Quality Standards</em></h2>
       </div>
-      <div class="badge-grid" data-aos="fade-up">
-        <span class="badge-chip"><i class="material-icons">verified</i> ISO 9001:2015</span>
-        <span class="badge-chip"><i class="material-icons">verified</i> ISO 22000:2018</span>
-        <span class="badge-chip"><i class="material-icons">fact_check</i> FSSAI</span>
-        <span class="badge-chip"><i class="material-icons">public</i> APEDA</span>
-        <span class="badge-chip"><i class="material-icons">gavel</i> UKAS</span>
-        <span class="badge-chip"><i class="material-icons">gavel</i> DGFT</span>
-        <span class="badge-chip"><i class="material-icons">eco</i> Halal Committee</span>
-        <span class="badge-chip"><i class="material-icons">military_tech</i> Star Export House</span>
-        <span class="badge-chip"><i class="material-icons">health_and_safety</i> Saudi FDA</span>
-        <span class="badge-chip"><i class="material-icons">store</i> MSME</span>
-        <span class="badge-chip"><i class="material-icons">spa</i> Spices Board</span>
-        <span class="badge-chip"><i class="material-icons">flag</i> Make in India</span>
+    </div>
+
+    <div class="marquee marquee-row" data-aos="fade-up">
+      <div class="marquee-track">
+        <span class="certi-item"><i class="material-icons">verified</i><span>ISO 9001:2015</span></span>
+        <span class="certi-item"><i class="material-icons">verified</i><span>ISO 22000:2018</span></span>
+        <span class="certi-item"><i class="material-icons">fact_check</i><span>FSSAI</span></span>
+        <span class="certi-item"><i class="material-icons">public</i><span>APEDA</span></span>
+        <span class="certi-item"><i class="material-icons">gavel</i><span>UKAS</span></span>
+        <span class="certi-item"><i class="material-icons">gavel</i><span>DGFT</span></span>
+        <!-- duplicate set for seamless loop -->
+        <span class="certi-item"><i class="material-icons">verified</i><span>ISO 9001:2015</span></span>
+        <span class="certi-item"><i class="material-icons">verified</i><span>ISO 22000:2018</span></span>
+        <span class="certi-item"><i class="material-icons">fact_check</i><span>FSSAI</span></span>
+        <span class="certi-item"><i class="material-icons">public</i><span>APEDA</span></span>
+        <span class="certi-item"><i class="material-icons">gavel</i><span>UKAS</span></span>
+        <span class="certi-item"><i class="material-icons">gavel</i><span>DGFT</span></span>
+      </div>
+    </div>
+
+    <div class="marquee marquee-row" data-aos="fade-up">
+      <div class="marquee-track reverse">
+        <span class="certi-item"><i class="material-icons">eco</i><span>Halal Committee</span></span>
+        <span class="certi-item"><i class="material-icons">military_tech</i><span>Star Export House</span></span>
+        <span class="certi-item"><i class="material-icons">health_and_safety</i><span>Saudi FDA</span></span>
+        <span class="certi-item"><i class="material-icons">store</i><span>MSME</span></span>
+        <span class="certi-item"><i class="material-icons">spa</i><span>Spices Board</span></span>
+        <span class="certi-item"><i class="material-icons">flag</i><span>Make in India</span></span>
+        <!-- duplicate set for seamless loop -->
+        <span class="certi-item"><i class="material-icons">eco</i><span>Halal Committee</span></span>
+        <span class="certi-item"><i class="material-icons">military_tech</i><span>Star Export House</span></span>
+        <span class="certi-item"><i class="material-icons">health_and_safety</i><span>Saudi FDA</span></span>
+        <span class="certi-item"><i class="material-icons">store</i><span>MSME</span></span>
+        <span class="certi-item"><i class="material-icons">spa</i><span>Spices Board</span></span>
+        <span class="certi-item"><i class="material-icons">flag</i><span>Make in India</span></span>
       </div>
     </div>
   </section>
@@ -354,20 +402,19 @@
 <!-- Footer -->
 <footer id="footer">
   <div class="container">
-    <div class="row">
-      <div class="col-lg-4" style="flex:0 0 100%; max-width:100%; margin-bottom:32px;">
-        <img src="images/logo.png" alt="Head Star Global Pvt Ltd" class="footer-logo" style="filter:brightness(0) invert(1);">
+    <div class="footer-grid">
+      <div class="footer-col footer-brand">
+        <img src="images/logo-transparent.png" alt="Head Star Global Pvt Ltd" class="footer-logo">
         <p class="footer-about">Head Star Global Pvt Ltd is an ISO 9001:2015 certified leader in agro trading and export, connecting quality agricultural commodities from origin to destination with integrity and reliability.</p>
         <div class="footer-social">
-          <a href="https://www.facebook.com/profile.php?id=61553343447345" target="_blank" rel="noopener" aria-label="Facebook"><i class="material-icons">public</i></a>
-          <a href="https://www.linkedin.com/in/anoop-thajudeen-a72394227/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="material-icons">business_center</i></a>
-          <a href="https://www.instagram.com/headstarglobal/" target="_blank" rel="noopener" aria-label="Instagram"><i class="material-icons">camera_alt</i></a>
+          <a href="https://www.facebook.com/profile.php?id=61553343447345" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/in/anoop-thajudeen-a72394227/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/headstarglobal/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://wa.me/+918928492450?text=I%27m%20interested%20in%20your%20business%20model" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
         </div>
       </div>
-    </div>
 
-    <div class="row" style="display:grid; grid-template-columns:1fr; gap:32px;">
-      <div>
+      <div class="footer-col">
         <h5 class="footer-title">Quick Links</h5>
         <ul class="footer-menu">
           <li><a href="index.html">Home</a></li>
@@ -376,7 +423,8 @@
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
-      <div>
+
+      <div class="footer-col">
         <h5 class="footer-title">Our Trading</h5>
         <ul class="footer-menu">
           <li><a href="domestic-trading.html">Domestic Trading</a></li>
@@ -385,7 +433,8 @@
           <li><a href="agro-products.html">Agro Products</a></li>
         </ul>
       </div>
-      <div>
+
+      <div class="footer-col">
         <h5 class="footer-title">Registered Office</h5>
         <div class="footer-contact">
           <p><i class="material-icons">location_on</i> Head Star Global Pvt Ltd, No.509, Rupa Solitaire, Millennium Business Park, Thane Belapur Highway, Mahape, Navi Mumbai – 400 710, Maharashtra, India</p>
@@ -416,7 +465,7 @@
 <!-- Chat Widget -->
 <div class="chat-tooltip" id="chatTooltip">Need help? Chat with us!</div>
 <a href="https://wa.me/+918928492450?text=I%27m%20interested%20in%20your%20business%20model" target="_blank" rel="noopener" class="chat-widget" id="chatWidget" aria-label="Chat on WhatsApp">
-  <i class="material-icons">chat</i>
+  <i class="fa-brands fa-whatsapp"></i>
 </a>
 
 <!-- Toast Container -->
