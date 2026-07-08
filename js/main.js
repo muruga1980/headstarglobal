@@ -218,6 +218,45 @@
     });
   }
 
+  /* ---------- Export gallery carousel (dependency-free) ---------- */
+  function initExportGallery() {
+    var track = document.getElementById('exportGalleryTrack');
+    if (!track) return;
+    var prevBtn = document.querySelector('.gallery-nav.prev');
+    var nextBtn = document.querySelector('.gallery-nav.next');
+
+    function step() {
+      var slide = track.querySelector('.export-slide');
+      if (!slide) return 300;
+      var style = window.getComputedStyle(track);
+      var gap = parseFloat(style.gap) || 20;
+      return slide.getBoundingClientRect().width + gap;
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', function () {
+        track.scrollBy({ left: -step(), behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+      });
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener('click', function () {
+        track.scrollBy({ left: step(), behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+      });
+    }
+
+    if (!prefersReducedMotion) {
+      var timer = setInterval(function () {
+        if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 5) {
+          track.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          track.scrollBy({ left: step(), behavior: 'smooth' });
+        }
+      }, 2800);
+      track.addEventListener('mouseenter', function () { clearInterval(timer); });
+      track.addEventListener('touchstart', function () { clearInterval(timer); }, { passive: true });
+    }
+  }
+
   /* ---------- Boot sequence ---------- */
   document.addEventListener('DOMContentLoaded', function () {
     initPreloader();
@@ -229,6 +268,7 @@
     initSmoothScroll();
     initCounters();
     initFAQ();
+    initExportGallery();
     initAOS();
   });
 })();

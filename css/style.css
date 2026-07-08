@@ -579,8 +579,8 @@ ul, ol { list-style: none; }
   100% { transform: scaleY(0); transform-origin: bottom; opacity: 0.4; }
 }
 
-@media (max-width: 767px) {
-  .scroll-indicator { right: 24px; bottom: 28px; }
+@media (max-width: 1024px) {
+  .scroll-indicator { display: none; }
 }
 
 /* Page heading */
@@ -588,6 +588,8 @@ ul, ol { list-style: none; }
   position: relative;
   padding: 150px 0 70px;
   background: var(--secondary);
+  background-size: cover;
+  background-position: center;
   overflow: hidden;
 }
 
@@ -2180,4 +2182,114 @@ img[loading="lazy"].loaded {
   color: var(--text-light);
   font-size: 14px;
   margin: 0;
+}
+
+/* ======================================================
+   EXPORT GALLERY — custom dependency-free carousel
+   ====================================================== */
+.export-gallery {
+  position: relative;
+}
+
+.export-gallery-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding: 4px 4px 12px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.export-gallery-track::-webkit-scrollbar { display: none; }
+
+.export-slide {
+  flex: 0 0 calc(25% - 15px);
+  scroll-snap-align: start;
+  border-radius: var(--radius);
+  overflow: hidden;
+  height: 260px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+
+.export-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.export-slide:hover img {
+  transform: scale(1.08);
+}
+
+.gallery-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  z-index: 5;
+  cursor: pointer;
+  color: var(--secondary);
+  transition: var(--transition);
+}
+
+.gallery-nav:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.gallery-nav i { font-size: 22px; }
+
+.gallery-nav.prev { left: -22px; }
+.gallery-nav.next { right: -22px; }
+
+@media (max-width: 1024px) {
+  .export-slide { flex: 0 0 calc(33.333% - 14px); }
+}
+
+@media (max-width: 767px) {
+  .export-slide { flex: 0 0 calc(78% - 10px); height: 200px; }
+  .gallery-nav { display: none; }
+}
+
+/* ===== FLOATING ACTION BUTTONS — MOBILE REFINEMENT ===== */
+@media (max-width: 767px) {
+  .chat-widget {
+    width: 48px;
+    height: 48px;
+    font-size: 22px;
+    bottom: 18px;
+    right: 18px;
+  }
+
+  .back-to-top {
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
+    bottom: 74px;
+    right: 18px;
+  }
+
+  /* Calmer pulse on small screens so it doesn't compete for attention */
+  .chat-widget {
+    animation: chatPulseSoft 3s infinite;
+  }
+}
+
+@keyframes chatPulseSoft {
+  0%, 100% { box-shadow: 0 4px 15px rgba(37,211,102,0.35); }
+  50% { box-shadow: 0 4px 20px rgba(37,211,102,0.55); }
 }
